@@ -99,17 +99,13 @@
     display: grid;
 }
 
-.slider__experience .swiper-slide {
-    max-width: 400px;
-}
+
 
 .experience-card {
     border: 1px solid var(--color-border-default);
 }
 
-.slider__experience {
-    margin-top: 0.5rem;
-}
+
 
 .experience__list {
     font-size: var(--main-fonts-12-10);

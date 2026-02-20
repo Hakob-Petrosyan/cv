@@ -1,0 +1,8 @@
+.slider__experience .swiper-slide {
+    max-width: 400px;
+}
+.slider__experience {
+    margin-top: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+}

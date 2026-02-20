@@ -1,7 +1,10 @@
 import {useState} from "react";
-import Ocean from '@/components/Ocean/Ocean.jsx';
+import Ocean from '@/components/layout/Ocean/Ocean.jsx';
 import './about.css';
-import Button from "@/components/Button/Button.jsx";
+import Button from "@/components/ui/Button/Button.jsx";
+import MySlider from "@/components/ui/Slider/Slider.jsx";
+
+
 
 
 export default function About(){
@@ -120,150 +123,35 @@ export default function About(){
                                 activeTab === 2 &&
                                 <div className="about-content experience-content">
                                     <div className="u-flex u-justify-between">
-                                            <h2>Опыт работы</h2>
-                                            <div className="u-flex u-gap-2">
-                                                <button id="experience_slide_left"
-                                                        className="slider-control-btn u-flex u-r-1">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                         stroke-width="2"
-                                                         stroke-linecap="round" stroke-linejoin="round"
-                                                         className="lucide lucide-move-left-icon lucide-move-left">
-                                                        <path d="M6 8L2 12L6 16"/>
-                                                        <path d="M2 12H22"/>
-                                                    </svg>
-                                                </button>
-                                                <button id="experience_slide_Right"
-                                                        className="slider-control-btn u-flex u-r-1">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                         stroke-width="2"
-                                                         stroke-linecap="round" stroke-linejoin="round"
-                                                         className="lucide lucide-move-right-icon lucide-move-right">
-                                                        <path d="M18 8L22 12L18 16"/>
-                                                        <path d="M2 12H22"/>
-                                                    </svg>
-                                                </button>
-                                            </div>
+                                        <h2>Опыт работы</h2>
+                                        <div className="u-flex u-gap-2">
+                                            <button id="experience_slide_left"
+                                                    className="slider-control-btn u-flex u-r-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2"
+                                                     stroke-linecap="round" stroke-linejoin="round"
+                                                     className="lucide lucide-move-left-icon lucide-move-left">
+                                                    <path d="M6 8L2 12L6 16"/>
+                                                    <path d="M2 12H22"/>
+                                                </svg>
+                                            </button>
+                                            <button id="experience_slide_Right"
+                                                    className="slider-control-btn u-flex u-r-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2"
+                                                     stroke-linecap="round" stroke-linejoin="round"
+                                                     className="lucide lucide-move-right-icon lucide-move-right">
+                                                    <path d="M18 8L22 12L18 16"/>
+                                                    <path d="M2 12H22"/>
+                                                </svg>
+                                            </button>
                                         </div>
-
-                                    <div className='slider__experience' data-slider-experience>
-                                            <div className="swiper-wrapper">
-                                                <div className="swiper-slide">
-                                                    <div className="experience-card u-r-3 u-p-3">
-                                                        <h3 className="experience-company-name">Kondrashov.online</h3>
-                                                        <span>Middle Frontend-разработчик</span>
-                                                        <p>Сентябрь 2022 — настоящее время</p>
-
-                                                        <ul className="experience__list">
-                                                            <li>Разработка фронтенда с нуля по макетам Figma</li>
-                                                            <li>Реализация бизнес-логики и UI-функционала на JavaScript</li>
-                                                            <li>
-                                                                Интеграция верстки и логики в CMS:
-                                                                <ul>
-                                                                    <li>WordPress</li>
-                                                                    <li>Bitrix</li>
-                                                                    <li>MODX</li>
-                                                                    <li>OpenCart</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>Адаптивная и кроссбраузерная верстка</li>
-                                                            <li>Взаимодействие с дизайнерами и backend-разработчиками</li>
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div className="experience-card u-r-3 u-p-3">
-                                                        <h3 className="experience-company-name">WebEx</h3>
-                                                        <span>Frontend / Web-разработчик</span>
-                                                        <p>Декабрь 2020 — Сентябрь 2022</p>
-
-                                                        <ul className="experience__list">
-                                                            <li>Коммерческая фронтенд-разработка учебных и клиентских
-                                                                проектов
-                                                            </li>
-                                                            <li>Верстка и реализация JS-функционала</li>
-                                                            <li>Работа с асинхронными запросами (Ajax)</li>
-                                                            <li>Командная разработка</li>
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div className="experience-card u-r-3 u-p-3">
-                                                        <h3 className="experience-company-name">Много Мебели</h3>
-                                                        <span>Управляющий магазином</span>
-                                                        <p>Май 2018 — Октябрь 2020</p>
-
-                                                        <ul className="experience__list">
-                                                            <li>Организация, развитие и контроль процесса продаж</li>
-                                                            <li>Управление, организация и контроль работы персонала</li>
-                                                            <li>В случае необходимости выполнение обязанностей сотрудника
-                                                                магазина
-                                                            </li>
-                                                            <li>Ведение и оформление всей документации магазина</li>
-                                                            <li>Решение вопросов по инкасации</li>
-                                                            <li>Анализ результатов продаж</li>
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div className="experience-card u-r-3 u-p-3">
-                                                        <h3 className="experience-company-name">Первый гипермаркет
-                                                            мебели</h3>
-                                                        <span>Территориальный менеджер по продажам</span>
-                                                        <p>Сентябрь 2017 — Апрель 2018 (8 месяцев)</p>
-
-                                                        <ul className="experience__list">
-                                                            <li>Открытие новых салонов</li>
-                                                            <li>Организация, развитие и контроль процесса продаж</li>
-                                                            <li>Управление, организация и контроль работы персонала</li>
-                                                            <li>Анализ результатов продаж</li>
-                                                            <li>Тренинг</li>
-                                                            <li>Коучинг</li>
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div className="experience-card u-r-3 u-p-3">
-                                                        <h3 className="experience-company-name">Ucom</h3>
-                                                        <span>Руководитель салона</span>
-                                                        <p>Май 2016 — Сентябрь 2017</p>
-
-                                                        <ul className="experience__list">
-                                                            <li>Анализ рынка</li>
-                                                            <li>тренинг</li>
-                                                            <li>коучинг</li>
-                                                            <li>Распределение плана продаж</li>
-                                                            <li>Управление, организация и контроль работы персонала</li>
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                                <div className="swiper-slide">
-                                                    <div className="experience-card u-r-3 u-p-3">
-                                                        <h3 className="experience-company-name">OrangeArmenia</h3>
-                                                        <span>Директор магазина</span>
-                                                        <p>Ноябрь 2009 — Апрель 2016</p>
-
-                                                        <ul className="experience__list">
-                                                            <li>Анализ рынка</li>
-                                                            <li>Подобрать новых сотрудников</li>
-                                                            <li>коучинг</li>
-                                                            <li>Распределение плана продаж</li>
-                                                            <li>Управление, организация и контроль работы персонала</li>
-                                                            <li>Анализ результатов продаж</li>
-                                                            <li>Решение вопросов по инкасации</li>
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    </div>
+                                    <MySlider className="slider__experience" />
                                 </div>
+
                             }
                             {
                                 activeTab === 3 &&
@@ -377,10 +265,10 @@ export default function About(){
 
                             {
                                 tabs.map((tub, index) => (
-                                    <li key={index} className="btn-main-wrapper"  onClick = {() => setActiveTab(index)}>
+                                    <li key={index} className="btn-main-wrapper"  >
                                         <Button
                                             active = {activeTab === index}
-
+                                            onClick = {() => setActiveTab(index)}
                                         >
                                             <span>{tub}</span>
                                             <span>{tub}</span>
