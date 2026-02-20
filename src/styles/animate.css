@@ -1,0 +1,21 @@
+
+.about-nav:after{
+    animation: handSwipe 2s linear 5;
+}
+
+@keyframes  handSwipe{
+    0%{right:16px}
+    50%{right:32px}
+    100%{right:16px}
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .wave {
+        animation: none !important;
+    }
+
+    .about-nav:after {
+        animation: none !important;
+    }
+}

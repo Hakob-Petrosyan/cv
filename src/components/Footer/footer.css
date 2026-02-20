@@ -1,0 +1,51 @@
+footer {
+    margin-top: 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.footer__title {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__list a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer__list a svg path {
+    transition: fill 300ms;
+}
+
+.footer-col {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem var(--color-border-default);
+    padding: 1rem;
+}
+
+.footer-top{
+    padding: 0 0.75rem;
+}
+
+@media (hover: hover) and (pointer: fine){
+    .footer__list a:hover {
+        color: var(--color-orange);
+    }
+
+    .footer__list a:hover svg path {
+        fill: var(--color-orange);
+    }
+
+}

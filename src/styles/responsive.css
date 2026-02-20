@@ -1,0 +1,134 @@
+@media (max-width: 1120px) {
+    .skills{
+        padding: 0 12px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .header-content{
+        flex-direction: column;
+        align-items: start;
+        padding: 0 1rem;
+    }
+
+    .job-title{
+        width: unset;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .about-content{
+        max-height: unset;
+    }
+
+    .about-media{
+        order: 0;
+        padding: 0 1rem;
+        max-width: 182px;
+    }
+
+    .about-nav{
+        order: 1;
+        padding: 0;
+        border: none;
+        position: relative;
+    }
+    .about-nav:after{
+        content: url("/assets/images/icons/hand-icon.svg");
+        position: absolute;
+        height: 20px;
+        right: 16px;
+        top: 100%;
+    }
+
+    .about-panel{
+        order: 2;
+        padding: 0;
+    }
+
+    .about-panes{
+        flex-direction: row;
+        gap: 16px;
+        padding: 6px 16px;
+        overflow-x: auto;
+    }
+
+    .education{
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .about-panes::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-panes{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .btn-main-wrapper{
+        min-width: 250px;
+    }
+
+    .about-description{
+        border-radius: unset;
+        background: none;
+    }
+
+    .education-card{
+        border: 1px solid var(--color-border-default);
+    }
+
+    .skills{
+        padding: 0;
+    }
+
+    .projects-content{
+        width: calc(100% + 32px);
+        margin-left: -1rem;
+    }
+
+    .projects-content [data-container]{
+        padding: 0 1rem 1rem;
+    }
+
+    .projects{
+        margin-top: 1rem;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+
+
+    footer{
+        margin-top: 0;
+    }
+
+    .footer-top,
+    .footer-col{
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .swiper-slide{
+        height: auto;
+    }
+    .experience-card{
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+
+
+}
+
+@media (max-width: 570px) {
+    .btn-main-wrapper{
+        min-width: 170px;
+    }
+}
+

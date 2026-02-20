@@ -1,0 +1,258 @@
+.job-title {
+    font-size: var(--main-fonts-18-16);
+    font-weight: 600;
+    text-align: center;
+    width: 16rem;
+}
+
+.job-subtitle {
+    font-size: var(--main-fonts-12-10);
+    max-width: 200px;
+    color: var(--color-border-default);
+}
+
+.about {
+    display: grid;
+    grid-template-columns:16rem 1fr 16rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about__block {
+    background-color: var(--color-wave-ocean);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-description {
+    height: 100%;
+}
+
+.about-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.about-description::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: var(--color-border-default);
+}
+
+.about-description::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.about-description::-webkit-scrollbar-button {
+    display: none;
+}
+
+.about-panes{
+    flex-direction: column;
+}
+
+@supports (-moz-appearance: none) {
+    .about__description {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-grey) transparent;
+    }
+}
+
+.about-media {
+    position: relative;
+}
+
+.about-content{
+    max-height: 347px;
+}
+
+
+.about-content h2 {
+    font-family: 'Halvar Breit';
+}
+
+.about-content p,
+.about-content ul,
+.about-content ol {
+    margin-top: 0.25rem;
+    color: var(--color-grey);
+}
+
+.education-card {
+    gap: 1rem;
+    position: relative;
+}
+
+.educational-institution,
+.education-languages {
+    font-size: var(--main-fonts-14-12);
+}
+
+.diploma-doc {
+    position: relative;
+}
+
+.diploma-doc svg,
+.diploma-doc svg path {
+    transition: stroke 200ms;
+}
+
+.experience-content {
+    display: grid;
+}
+
+.slider__experience .swiper-slide {
+    max-width: 400px;
+}
+
+.experience-card {
+    border: 1px solid var(--color-border-default);
+}
+
+.slider__experience {
+    margin-top: 0.5rem;
+}
+
+.experience__list {
+    font-size: var(--main-fonts-12-10);
+}
+
+.experience__list,
+.experience__list ul,
+.experience__list ol {
+    padding-left: 19px;
+}
+
+.experience__list li {
+    list-style: disc;
+}
+
+.experience__company-name {
+    font-weight: 600;
+}
+
+.slider-control-btn {
+    padding: 0 20px;
+    border: 1px solid var(--color-border-default);
+    transition: border 300ms;
+}
+
+.slider-control-btn svg path {
+    transition: stroke 300ms;
+}
+
+.diploma-wrapper {
+    display: flex;
+    height: 250px;
+    margin-left: 12px;
+}
+
+.skills__item{
+    border: 1px solid  var(--color-border-default);
+}
+
+legend{
+    white-space: nowrap;
+}
+
+.education{
+    padding: 1rem;
+}
+
+.skills__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.projects{
+    margin-top: 20px;
+}
+
+.about-nav {
+    border: 1px solid var(--color-border-default);
+}
+
+.btn-main-wrapper {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-main {
+    display: flex;
+    position: relative;
+    height: 2rem;
+    width: 100%;
+    transition: 300ms;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.btn-main span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0.625rem 0 var(--color-border-default);
+    border-radius: 0.5rem;
+    transition: opacity 800ms;
+}
+
+.btn-main span:nth-child(1) {
+    transform: rotateX(360deg) translateZ(1rem);
+}
+
+.btn-main span:nth-child(2) {
+    transform: rotateX(270deg) translateZ(1rem);
+    opacity: 0;
+}
+
+.btn-main-wrapper .btn-main.active,
+.btn-main-wrapper .btn-main.short-animation {
+    transform: perspective(1000px) rotateX(90deg);
+    color: var(--color-orange);
+}
+
+.btn-main-wrapper .btn-main.active span,
+.btn-main-wrapper .btn-main.short-animation span {
+    box-shadow: 0 0 0.625rem 0 var(--color-orange);
+    opacity: 1;
+}
+
+.btn-main-wrapper .btn-main.active span:nth-child(1){
+    opacity: 0;
+}
+
+
+@media (hover: hover) and (pointer: fine){
+    .btn-main:hover {
+        transform: perspective(1000px) rotateX(90deg);
+    }
+
+    .btn-main:hover span {
+        box-shadow: 0 0 0.625rem 0 var(--color-orange);
+        opacity: 1;
+    }
+
+    .diploma-doc:hover svg path{
+        stroke: var(--color-orange);
+    }
+
+    .diploma-doc:hover svg {
+        stroke: var(--color-orange);
+    }
+
+    .slider-control-btn:not(.swiper-button-disabled):hover svg path {
+        stroke: var(--color-orange);
+    }
+
+    .slider-control-btn:not(.swiper-button-disabled):hover {
+        border: 1px solid var(--color-orange);
+    }
+
+}

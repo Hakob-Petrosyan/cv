@@ -1,0 +1,84 @@
+/*-------FLEX---------*/
+
+.u-flex {
+    display: flex;
+}
+
+.u-inline-flex {
+    display: inline-flex;
+}
+
+.u-flex-row {
+    flex-direction: row;
+}
+
+.u-flex-col {
+    flex-direction: column;
+}
+
+.u-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.u-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.u-justify-start {
+    justify-content: flex-start;
+}
+
+.u-justify-center {
+    justify-content: center;
+}
+
+.u-justify-end {
+    justify-content: flex-end;
+}
+
+.u-justify-between {
+    justify-content: space-between;
+}
+
+.u-align-start {
+    align-items: flex-start;
+}
+
+.u-align-center {
+    align-items: center;
+}
+
+.u-align-end {
+    align-items: flex-end;
+}
+
+/* ---- GAP ----- */
+
+.u-gap-1 { gap: 0.25rem; }
+.u-gap-2 { gap: 0.5rem; }
+.u-gap-3 { gap: 1rem; }
+.u-gap-4 { gap: 1.5rem; }
+
+/* ----- PADDING ----*/
+
+.u-p-0 { padding: 0; }
+.u-p-1 { padding: 0.25rem; }
+.u-p-2 { padding: 0.5rem; }
+.u-p-3 { padding: 1rem; }
+.u-p-4 { padding: 1.5rem; }
+
+.u-r-1 {
+    border-radius: 0.25rem;
+}
+.u-r-2 {
+    border-radius: 0.5rem;
+}
+.u-r-3 {
+    border-radius: 1rem;
+}
+
+@media (max-width: 992px) {
+    .u-r-3 {
+        border-radius: 0;
+    }
+}

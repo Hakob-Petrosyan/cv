@@ -1,0 +1,52 @@
+.ocean {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-wave-ocean);
+}
+.wave {
+    position: absolute;
+    width: 6400px;
+    height: 198px;
+    transform: translate3d(0, 0, 0);
+}
+.wave:nth-child(1) {
+    top: 2%;
+    background: url('/src/assets/images/ocean/wave.svg') repeat-x;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+.wave:nth-child(2) {
+    background: url('/src/assets/images/ocean/wave-2.svg') repeat-x;
+    top: 12%;
+    animation: wave 11s cubic-bezier(0.36, 0.95, 0.63, 0.53) -0.125s infinite, swell 6s ease -1.25s infinite;
+    opacity: 1;
+}
+.wave:nth-child(3) {
+    background: url('/src/assets/images/ocean/wave-3.svg') repeat-x;
+    top: 35%;
+    animation: wave 6s cubic-bezier(0.36, 0.76, 0.63, 0.53) -0.125s infinite, swell 8s ease -1.25s infinite;
+    opacity: 1;
+}
+.wave:nth-child(4) {
+    background: url('/src/assets/images/ocean/wave-4.svg') repeat-x;
+    top: 60%;
+    animation: wave 10s cubic-bezier(0.36, 0.76, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1
+}
+.wave:nth-child(5) {
+    background: url('/src/assets/images/ocean/wave-5.svg') repeat-x;
+    top: 70%;
+    animation: wave 7s cubic-bezier(0.36, 0.76, 0.63, 0.53) -0.125s infinite, swell 6s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave{
+    0%{margin-left:0}
+    100%{margin-left:-1600px}
+}
+@keyframes swell{
+    0%,100%{transform:translate3d(0, -25px, 0)}
+    50%{transform:translate3d(0, 5px, 0)}
+}
